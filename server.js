@@ -35,11 +35,11 @@ app.get("/", (req, res) => {
 
 const productRouter = require("./routes/products")(db, upload, bucket); // Ensure correct path and arguments
 const cartRouter = require("./routes/cart")(db);
-const adminRouter = require('./routes/admin')(db, upload, bucket)
+// const adminRouter = require('./routes/admin')(db, upload, bucket)
 
 app.use("/cart", cartRouter);
 app.use("/products", productRouter); 
-app.use("/admin", adminRouter)
+// app.use("/admin", adminRouter)
 
 const PORT = process.env.PORT || 61361;
 app.listen(PORT, () => {
